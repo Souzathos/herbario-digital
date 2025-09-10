@@ -1,36 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina Inicial</title>
-    <link rel="stylesheet" href="/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Herbário Digital</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
-    <header>
-        <nav class="nav-bar">
-            <img src="/imgs HOME/logo.png" id="logo" alt="logo">
-            <ul>
-                <li><a href="index.html">Pagina Inicial</a></li>
-                <li><a href="cadastrarPlanta.html">Cadastrar Planta</a></li>
-                <li><a href="plantasRegistradas.html">Plantas Registradas</a></li>
-                <li><a href="sobre.html">Sobre o Projeto</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main class="main-content">
-      <div id="main-container">
-        <div class="main-messages">
-        <h1 class="title-main">Seja bem vindo(a), <br> ao HERBÁRIO DIGITAL!</h1>
-        <h3 class="subtitle-main">Conheça, registre e preserve a biodiversidade ao seu redor</h3>
-        </div>
-        <img src="/imgs HOME/planta-main.png" class="hibisco" alt="foto de um hibisco vermelho">
-        </div>
-    </main>
-    <footer>
-        <p>Desenvolvido por Pedro Farenzena & Ellen Vieira &copy;</p>
-    </footer>
+<body class="bg-gray-50 text-gray-800 bg-gray-50">
 
- 
+  <!-- Navbar -->
+  <header class="fixed top-0 w-full bg-white shadow z-50">
+    <nav class="container mx-auto flex justify-between items-center py-4 px-6">
+      <img src="../imgs/logo.png" alt="Logo" class="h-12">
+      <ul class="hidden md:flex gap-6 font-medium">
+        <li><a href="index.html" class="hover:text-green-700 transition">Página Inicial</a></li>
+        <li><a href="cadastrarPlanta.html" class="hover:text-green-700 transition">Cadastrar Planta</a></li>
+        <li><a href="plantasRegistradas.html" class="hover:text-green-700 transition">Plantas Registradas</a></li>
+        <li><a href="sobre.html" class="hover:text-green-700 transition">Sobre o Projeto</a></li>
+      </ul>
+      <button onclick() class="md:hidden p-2 rounded bg-green-700 text-white">☰</button>
+    </nav>
+  </header>
+  <!-- Hero Section -->
+  <!-- Banner -->
+    <div class="w-full">
+      <img src="../imgs/bannerATUALIZADO.png" 
+          alt="Banner Herbário Digital"
+          class="w-full h-64 md:h-96 object-cover">
+    </div>
+  <main id="mainContent" class="  container mx-auto flex flex-col md:flex-row items-center gap-12 gap-y-20">
+    <div class="flex-1 mt-36">
+
+      <h1 class="text-4xl md:text-5xl font-bold text-green-800 leading-tight">
+        Seja bem-vindo(a) ao <span class="text-green-600">Herbário Digital</span>
+      </h1>
+      <p class="mt-4 text-lg text-gray-600">
+        Conheça, registre e preserve a biodiversidade ao seu redor.
+      </p>
+      <a href="cadastrarPlanta.html" 
+         class="mt-6 inline-block bg-green-700 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-800 transition">
+        Cadastrar Planta
+      </a>
+    </div>
+    <div class="flex-1 flex justify-center mt-24">
+      <img src="../imgs/logo.png" alt="Imagem de uma planta" class="max-w-sm w-full">
+    
+    </div>
+  </main>
+
+  <!-- Footer -->
+ <footer class="fixed bottom-0 text-center bg-green-800 text-white py-6 w-full">
+    <p>© 2025 Athos Souza, Henzo Bolis, Francisco Mendes e Pedro Henrique.</p>
+  </footer>
+
 </body>
 </html>

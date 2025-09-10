@@ -2,44 +2,59 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plantas Registradas</title>
-    <link rel="stylesheet" href="/css/plantas.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plantas Registradas - Herbário Digital</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-    <header>
-        <nav class="nav-bar">
-            <img src="/imgs HOME/logo.png" id="logo" alt="logo">
-            <ul>
-                <li><a href="index.html">Pagina Inicial</a></li>
-                <li><a href="cadastrarPlanta.html">Cadastrar Planta</a></li>
-                <li><a href="plantasRegistradas.html">Plantas Registradas</a></li>
-                <li><a href="sobre.html">Sobre o Projeto</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main class="main-content" id="main" >
-        <div class="card1" >
-            <img src="/imgs HOME/hibisco.png" alt="flor"> </img>
-            <p id="p-nome">Nome Popular:</p>
-            <p id="p-nome-cientifico">Nome Científico:</p>
-            <p id="p-familia">Família Botânica:</p>
-            <p id="p-origem">Origem / Distribuição:</p>
-            <p id="p-usos">Usos Medicinais:</p>
-            <p id="p-principios">Princípios Ativos:</p>
-            <p id="p-parte">Parte Utilizada:</p>
-            <p id="p-modo">Modo de Preparo:</p>
-            <p id="p-contraindicacoes">Contraindicações:</p>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navbar -->
+  <header class="fixed top-0 w-full bg-white shadow z-50">
+    <nav class="container mx-auto flex justify-between items-center py-4 px-6">
+      <a href="index.html"><img src="../imgs/logo.png" alt="Logo" class="h-12"></a>
+      <ul class="hidden md:flex gap-6 font-medium">
+        <li><a href="index.html" class="hover:text-green-700">Página Inicial</a></li>
+        <li><a href="cadastrarPlanta.html" class="hover:text-green-700">Cadastrar Planta</a></li>
+        <li><a href="plantasRegistradas.html" class="text-green-700 font-semibold">Plantas Registradas</a></li>
+        <li><a href="sobre.html" class="hover:text-green-700">Sobre o Projeto</a></li>
+      </ul>
+      <button onclick() class="md:hidden p-2 rounded bg-green-700 text-white">☰</button>
+    </nav>
+  </header>
+
+  <!-- Conteúdo -->
+  <main class="pt-28 container mx-auto px-6">
+
+    <h1 class="text-3xl font-bold text-green-800 mb-8">Plantas Registradas</h1>
+
+    <!-- Card de Planta (modelo para o back-end preencher depois) -->
+    <div class="bg-white p-6 rounded-xl shadow-md max-w-md mx-auto mb-6">
+      <img src="imgs/hibisco.png" alt="Imagem da planta"
+           class="w-full h-60 object-cover rounded-lg mb-4">
+
+      <p class="font-semibold text-gray-800">Nome Popular: <span id="p-nome" class="font-normal text-gray-600">---</span></p>
+      <p class="font-semibold text-gray-800">Nome Científico: <span id="p-nome-cientifico" class="font-normal text-gray-600">---</span></p>
+      <p class="font-semibold text-gray-800">Família Botânica: <span id="p-familia" class="font-normal text-gray-600">---</span></p>
+      <p class="font-semibold text-gray-800">Origem / Distribuição: <span id="p-origem" class="font-normal text-gray-600">---</span></p>
+      <p class="font-semibold text-gray-800">Usos Medicinais: <span id="p-usos" class="font-normal text-gray-600">---</span></p>
+      <p class="font-semibold text-gray-800">Princípios Ativos: <span id="p-principios" class="font-normal text-gray-600">---</span></p>
+      <p class="font-semibold text-gray-800">Parte Utilizada: <span id="p-parte" class="font-normal text-gray-600">---</span></p>
+      <p class="font-semibold text-gray-800">Modo de Preparo: <span id="p-modo" class="font-normal text-gray-600">---</span></p>
+      <p class="font-semibold text-gray-800">Contraindicações: <span id="p-contraindicacoes" class="font-normal text-gray-600">---</span></p>
     </div>
-     
-    </main>
-    <footer>
-        <p>Desenvolvido por Pedro Farenzena & Ellen Vieira &copy;</p>
-    </footer>
 
-    <script src="/js/script.js"></script>
+    <!-- Você pode duplicar o card acima para mostrar várias plantas,
+         depois o back-end substitui os "id" e valores. -->
+
+  </main>
+
+  <!-- Footer -->
+   <footer class="fixed bottom-0 text-center bg-green-800 text-white py-6 w-full">
+    <p>© 2025 Athos Souza, Henzo Bolis, Francisco Mendes e Pedro Henrique.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
-
 </html>
